@@ -40,8 +40,7 @@ const userController = {
     },
     refreshToken: (req, res) => {
         try {
-            //const refreshToken = req.cookies.refreshToken;
-            const refreshToken = req.headers.cookie.split("=")[1]
+            const refreshToken = req.cookies.refreshToken;
 
             if (!refreshToken)
                 return res.status(400).json({ message: "Please Login or Register1" });
