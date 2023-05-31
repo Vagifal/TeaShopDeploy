@@ -45,8 +45,10 @@ const userController = {
 
             if (!refreshToken)
                 return res.status(400).json({ message: "Please Login or Register" });
+            console.log("first")
 
             jwt.verify(refreshToken, "" + process.env.REFRESH_TOKEN, (error, user) => {
+                console.log("second " + error)
                 if (error)
                     return res.status(400).json({ msg: "Please Login or Register" });
 
@@ -78,7 +80,7 @@ const userController = {
 
             res.cookie('refreshToken', refreshToken, {
                 httpOnly: true,
-                path: 'http://localhost:5000/user/refreshToken',
+                path: 'https://tea-shop-be.onrender.com/user/refreshToken',
                 origin: 'http://localhost:3000',
                 maxAge: 7 * 24 * 60 * 60 * 1000
             });
