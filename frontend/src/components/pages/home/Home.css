@@ -1,0 +1,36 @@
+.home {
+    padding-top: 20px;
+    text-align: center;
+    color: grey;
+}
+
+.home p {
+    text-align: left;
+}
+
+.home h2 {
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.each-slide-effect>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 500px;
+}
+
+.each-slide-effect span {
+    padding: 20px;
+    font-size: 20px;
+    background: white;
+    text-align: center;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.react-slideshow-container .default-nav {
+    display: none;
+}

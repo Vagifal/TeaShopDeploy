@@ -1,0 +1,38 @@
+.filter-panel {
+    width: 100%;
+    min-height: 40px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    box-sizing: border-box;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.filter-panel button {
+    background-color: grey;
+    color: white;
+    border-radius: 3px;
+    padding: 10px 15px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.filter-panel select,
+input {
+    border: 2px solid grey;
+    outline: none;
+    height: 40px;
+    padding: 5px;
+    border-radius: 3px;
+    color: grey;
+}
+
+.filter-panel input {
+    flex: 1;
+    margin: 0 10px;
+}

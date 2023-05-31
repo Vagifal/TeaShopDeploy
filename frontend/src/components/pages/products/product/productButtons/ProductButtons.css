@@ -1,0 +1,27 @@
+.product-buttons {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-buttons a {
+    width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 8px;
+    border-radius: 3px;
+}
+
+#button-buy {
+    background-color: gray;
+    margin-right: 5px;
+}
+
+#button-view {
+    background-color: black;
+    margin-left: 5px;
+}

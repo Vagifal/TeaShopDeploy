@@ -1,0 +1,44 @@
+.profile {
+    overflow-x: auto;
+    color: grey;
+}
+
+.profile h2,
+h4 {
+    text-align: center;
+    margin: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.profile table {
+    margin: auto;
+    width: 70%;
+}
+
+.profile table,
+th,
+tr,
+td {
+    border: 3px solid #ddd;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+table a {
+    color: grey;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.profile img {
+    width: 70px;
+    height: 100px;
+    object-fit: cover;
+}

@@ -1,0 +1,95 @@
+.basket-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.basket-item {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px;
+    font-size: 150%;
+    position: relative;
+    border: 1px solid grey;
+    border-radius: 3px;
+    transform: scaleY(0.98);
+}
+
+.basket-item img {
+    max-width: 200px !important;
+    max-height: 200px !important;
+    margin: 10px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-details {
+    max-width: 500px;
+    width: 100%;
+    margin: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-details h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 2rem;
+}
+
+.product-details p {
+    line-height: 1.5;
+    margin: 10px 0;
+    opacity: 0.8;
+    font-size: medium;
+}
+
+.amount {
+    display: flex;
+    align-items: center;
+}
+
+.amount span {
+    color: grey;
+    padding: 0 20px;
+}
+
+.amount button {
+    width: 40px;
+    height: 40px;
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.delete {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    color: black;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.total {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.total h3 {
+    color: black;
+    font-size: 30px;
+}
+
+.total>div {
+    min-height: 0px !important;
+}
