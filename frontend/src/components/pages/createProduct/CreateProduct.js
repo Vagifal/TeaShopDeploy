@@ -73,7 +73,7 @@ const CreateProduct = () => {
 
             setLoading(true);
 
-            const res = await axios.post('http://localhost:5000/asset/upload', formData, {
+            const res = await axios.post('https://tea-shop-be.onrender.com/asset/upload', formData, {
                 headers: { 'content-type': 'multipart/form-data', Authorization: token }
             });
 
@@ -91,7 +91,7 @@ const CreateProduct = () => {
                 return alert("You're not an admin");
 
             setLoading(true);
-            await axios.post('http://localhost:5000/asset/delete', { public_id: image.public_id }, {
+            await axios.post('https://tea-shop-be.onrender.com/asset/delete', { public_id: image.public_id }, {
                 headers: { Authorization: token }
             });
 
@@ -118,11 +118,11 @@ const CreateProduct = () => {
                 return alert("No Image Upload");
 
             if (onEdit) {
-                await axios.put(`http://localhost:5000/product/${product._id}`, { ...product, image }, {
+                await axios.put(`https://tea-shop-be.onrender.com/product/${product._id}`, { ...product, image }, {
                     headers: { Authorization: token }
                 });
             } else {
-                await axios.post('http://localhost:5000/product', { ...product, image }, {
+                await axios.post('https://tea-shop-be.onrender.com/product', { ...product, image }, {
                     headers: { Authorization: token }
                 });
             }

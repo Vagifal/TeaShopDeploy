@@ -17,7 +17,7 @@ const Login = () => {
     const loginSubmit = async e => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/user/login', { ...user }, { withCredentials: true, credentials: 'include' });
+            await axios.post('https://tea-shop-be.onrender.com/user/login', { ...user }, { withCredentials: true, credentials: 'include' });
             window.location.href = "/";
             localStorage.setItem('firstLogin', true);
 

@@ -11,7 +11,7 @@ const UserAPI = (token) => {
         if (token) {
             const getUser = async () => {
                 try {
-                    const res = await axios.get('http://localhost:5000/user/info', {
+                    const res = await axios.get('https://tea-shop-be.onrender.com/user/info', {
                         headers: { Authorization: token }
                     });
 
@@ -37,7 +37,7 @@ const UserAPI = (token) => {
         if (check) {
             setBasket([...basket, { ...product, quantity: 1 }]);
 
-            await axios.patch('http://localhost:5000/user/addBasket', { basket: [...basket, { ...product, quantity: 1 }] }, {
+            await axios.patch('https://tea-shop-be.onrender.com/user/addBasket', { basket: [...basket, { ...product, quantity: 1 }] }, {
                 headers: { Authorization: token }
             });
 

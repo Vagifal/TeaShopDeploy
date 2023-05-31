@@ -11,7 +11,7 @@ const ProductAPI = () => {
 
     useEffect(() => {
         const getProducts = async () => {
-            const res = await axios.get(`http://localhost:5000/product?limit=${page * 12}&${category}&${sort}&title[regex]=${search}`);
+            const res = await axios.get(`https://tea-shop-be.onrender.com/product?limit=${page * 12}&${category}&${sort}&title[regex]=${search}`);
             setProducts(res.data.products);
             setResult(res.data.result);
         }

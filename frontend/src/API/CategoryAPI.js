@@ -6,7 +6,7 @@ const CategoryAPI = () => {
 
     useEffect(() => {
         const getCategories = async () => {
-            const res = await axios.get('http://localhost:5000/category');
+            const res = await axios.get('https://tea-shop-be.onrender.com/category');
             setCategories(res.data);
         }
 

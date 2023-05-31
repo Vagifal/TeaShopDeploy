@@ -15,13 +15,13 @@ const Profile = () => {
         if (token) {
             const getOrders = async () => {
                 if (isAdmin) {
-                    const res = await axios.get('http://localhost:5000/order', {
+                    const res = await axios.get('https://tea-shop-be.onrender.com/order', {
                         headers: { Authorization: token }
                     });
 
                     setOrders(res.data);
                 } else {
-                    const res = await axios.get('http://localhost:5000/user/orders', {
+                    const res = await axios.get('https://tea-shop-be.onrender.com/user/orders', {
                         headers: { Authorization: token }
                     });
 

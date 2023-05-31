@@ -36,10 +36,10 @@ const Products = () => {
         if (window.confirm("Do you really want to delete selected products?")) {
             products.forEach(product => {
                 const deleteProduct = async () => {
-                    const deleteImage = axios.post('http://localhost:5000/asset/delete', { public_id: product.image.public_id }, {
+                    const deleteImage = axios.post('https://tea-shop-be.onrender.com/asset/delete', { public_id: product.image.public_id }, {
                         headers: { Authorization: token }
                     });
-                    const deleteProduct = axios.delete(`http://localhost:5000/product/${product._id}`, {
+                    const deleteProduct = axios.delete(`https://tea-shop-be.onrender.com/product/${product._id}`, {
                         headers: { Authorization: token }
                     });
 
@@ -59,10 +59,10 @@ const Products = () => {
     const deleteProductHandler = async (id, public_id) => {
         if (window.confirm("Do you really want to delete this product?")) {
             try {
-                const deleteImage = axios.post('http://localhost:5000/asset/delete', { public_id }, {
+                const deleteImage = axios.post('https://tea-shop-be.onrender.com/asset/delete', { public_id }, {
                     headers: { Authorization: token }
                 });
-                const deleteProduct = axios.delete(`http://localhost:5000/product/${id}`, {
+                const deleteProduct = axios.delete(`https://tea-shop-be.onrender.com/product/${id}`, {
                     headers: { Authorization: token }
                 });
 

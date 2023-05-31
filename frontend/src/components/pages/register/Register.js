@@ -17,7 +17,7 @@ const Register = () => {
     const registerSubmit = async e => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/user/register', { ...user });
+            await axios.post('https://tea-shop-be.onrender.com/user/register', { ...user });
             window.location.href = "/";
             localStorage.setItem('firstLogin', true);
 

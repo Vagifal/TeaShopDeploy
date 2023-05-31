@@ -17,12 +17,12 @@ const CategoriesPage = () => {
         e.preventDefault();
         try {
             if (onEdit) {
-                const res = await axios.put(`http://localhost:5000/category/${id}`, { name: category }, {
+                const res = await axios.put(`https://tea-shop-be.onrender.com/category/${id}`, { name: category }, {
                     headers: { Authorization: token }
                 });
                 alert(res.data.message);
             } else {
-                const res = await axios.post('http://localhost:5000/category', { name: category }, {
+                const res = await axios.post('https://tea-shop-be.onrender.com/category', { name: category }, {
                     headers: { Authorization: token }
                 });
                 alert(res.data.message);
@@ -44,7 +44,7 @@ const CategoriesPage = () => {
 
     const deleteCategory = async id => {
         try {
-            const res = await axios.delete(`http://localhost:5000/category/${id}`, {
+            const res = await axios.delete(`https://tea-shop-be.onrender.com/category/${id}`, {
                 headers: { Authorization: token }
             });
             alert(res.data.message);

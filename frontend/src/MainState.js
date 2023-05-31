@@ -14,7 +14,7 @@ export const DataProvider = ({ children }) => {
         const firstLogin = localStorage.getItem('firstLogin');
         if (firstLogin) {
             const refreshToken = async () => {
-                const res = await axios.get('http://localhost:5000/user/refreshToken', { withCredentials: true, credentials: 'include' });
+                const res = await axios.get('https://tea-shop-be.onrender.com/user/refreshToken', { withCredentials: true, credentials: 'include' });
 
                 setToken(res.data.accessToken);
 

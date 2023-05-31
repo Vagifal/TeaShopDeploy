@@ -59,7 +59,7 @@ const Basket = () => {
     };
 
     const updateBasket = async (basket) => {
-        await axios.patch('http://localhost:5000/user/addBasket', { basket }, {
+        await axios.patch('https://tea-shop-be.onrender.com/user/addBasket', { basket }, {
             headers: { Authorization: token }
         });
     };
@@ -68,7 +68,7 @@ const Basket = () => {
         const id = data.id;
         const address = data.purchase_units[0].shipping.address;
 
-        await axios.post('http://localhost:5000/order', { basket, id, address }, {
+        await axios.post('https://tea-shop-be.onrender.com/order', { basket, id, address }, {
             headers: { Authorization: token }
         });
 
