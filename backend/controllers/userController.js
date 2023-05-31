@@ -44,13 +44,11 @@ const userController = {
             //const refreshToken = req.headers.cookie.split("=")[1]
 
             if (!refreshToken)
-                return res.status(400).json({ message: "Please Login or Register" });
-            console.log("first")
+                return res.status(400).json({ message: "Please Login or Register1" });
 
             jwt.verify(refreshToken, "" + process.env.REFRESH_TOKEN, (error, user) => {
-                console.log("second " + error)
                 if (error)
-                    return res.status(400).json({ msg: "Please Login or Register" });
+                    return res.status(400).json({ msg: "Please Login or Register2" });
 
                 const accessToken = createAccessToken({ id: user.id });
 
