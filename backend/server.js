@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 const app = express();
 
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: 'https://tea-shop-fe.onrender.com',
     credentials: true,
     optionSuccessStatus: 200
 };

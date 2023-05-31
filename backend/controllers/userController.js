@@ -78,7 +78,7 @@ const userController = {
             res.cookie('refreshToken', refreshToken, {
                 httpOnly: true,
                 path: 'https://tea-shop-be.onrender.com/user/refreshToken',
-                origin: 'http://localhost:3000',
+                origin: 'https://tea-shop-fe.onrender.com',
                 maxAge: 7 * 24 * 60 * 60 * 1000
             });
 
